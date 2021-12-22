@@ -68,8 +68,8 @@ function PaymenPage(props) {
                         return valueTime - 1}
                         
                         );
-                        
             },1000)
+            if(valueTime === 0 ) return alert("het thoi gian ")
             return () => clearInterval(timerId)
             
       },[])   

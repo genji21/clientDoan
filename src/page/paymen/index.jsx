@@ -147,7 +147,7 @@ function PaymenPage(props) {
           localStorage.setItem('cart',newFilter)
         paymentApi.createPayment({ cart });
           window.open(
-            `apidoan-production-5fa1.up.railway.app/order/create_payment_url?${newFilter}`
+            `https://apidoan-production-5fa1.up.railway.app/order/create_payment_url?${newFilter}`
           );
          
         form.reset()

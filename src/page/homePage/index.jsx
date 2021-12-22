@@ -24,7 +24,7 @@ function HomePage(props) {
                     </div>
                     <div className="homepage_service-content">
                       <h5 className="homepage_service-title ">
-                        Hỗ Trợ Khách Hàng 24/7 trang wweb de test  dsadsadsadsa
+                        Hỗ Trợ Khách Hàng 24/7
                       </h5>
                       <span className="homepage_service-text">
                         Chat là có, gọi là nghe, không quản đêm hôm, ngày nghỉ

@@ -75,17 +75,20 @@ function PaymenPage(props) {
             
       // },[])   
       useEffect(()=>{
-         let timerId = setInterval(() => {
-           setValueTime((valueTime) => {
-             if (valueTime === 1) {
-               setPopup(true);
-               clearInterval(timerId);
-             }
-             return valueTime - 1;
-           });
-         }, 1000);
+        let timerId
+        if(typeof valueTime ==="number"){
+          timerId = setInterval(() => {
+          setValueTime((valueTime) => {
+            if ( valueTime === 1) {
+            }
+            return valueTime - 1;
+          });
+        }, 1000);
+        }
+        
          if (valueTime === 0) {
            setPopup(true);
+           setValueTime('')
          }
          return () => clearInterval(timerId);
         

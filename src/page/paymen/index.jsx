@@ -6,7 +6,7 @@ import queryString from "query-string";
 import { useLocation, useHistory, Redirect } from "react-router";
 import './style.scss'
 import { FcAlarmClock } from "react-icons/fc";
-import { Button, Col, Container, Form, FormFeedback, FormGroup, FormText, Input, Label, Row } from 'reactstrap';
+import { Button, Col, Container, Form, FormFeedback, FormGroup, FormText, Input, Label, Modal, Row } from 'reactstrap';
 import dayjs from 'dayjs';
 import { useSelector } from 'react-redux';
 import { FaStar } from 'react-icons/fa';
@@ -21,6 +21,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import {FaBed} from "react-icons/fa";
 import NumberFormat from "react-number-format";
 import paymentApi from '../../api/paymentApi';
+
 import axios from 'axios';
 var duration = require("dayjs/plugin/duration");
 dayjs.extend(duration);
@@ -30,6 +31,7 @@ PaymenPage.propTypes = {
 };
 
 function PaymenPage(props) {
+    const history= useHistory()
     const location = useLocation()
     const [valueTime,setValueTime] = useState(10)
     const valueSearch = useSelector((state)=>state.payment)
@@ -58,21 +60,36 @@ function PaymenPage(props) {
       image,
     } = valueSearch;
      
-        useEffect(() => {
-          let timerId =   setInterval(()=>{
-                    setValueTime((valueTime) =>{
-                       if (valueTime === 1) {
-                         setPopup(true);
-                         clearInterval(timerId);
-                       }
-                        return valueTime - 1}
+      //   useEffect(() => {
+      //     let timerId =   setInterval(()=>{
+      //               setValueTime((valueTime) =>{
+      //                  if (valueTime === 1) {
+      //                    setPopup(true);
+      //                    clearInterval(timerId);
+      //                  }
+      //                   return valueTime - 1}
                         
-                        );
-            },1000)
-            if(valueTime === 0 ) return alert("het thoi gian ")
-            return () => clearInterval(timerId)
+      //                   );
+      //       },1000)
+      //       return () => clearInterval(timerId)
             
-      },[])   
+      // },[])   
+      useEffect(()=>{
+         let timerId = setInterval(() => {
+           setValueTime((valueTime) => {
+             if (valueTime === 1) {
+               setPopup(true);
+               clearInterval(timerId);
+             }
+             return valueTime - 1;
+           });
+         }, 1000);
+         if (valueTime === 0) {
+           setPopup(true);
+         }
+         return () => clearInterval(timerId);
+        
+      },[valueTime])
     const handleSecondToMinute=()=>{
        return Math.floor(valueTime / 60) + ":" + Math.floor(valueTime % 60);
     }
@@ -256,7 +273,6 @@ function PaymenPage(props) {
                           <FormGroup>
                             <Label htmlFor="email"> Email</Label>
                             <InputField
-                              
                               id="email"
                               form={form}
                               name="email"
@@ -337,7 +353,7 @@ function PaymenPage(props) {
                   <div className="paymentPage-Detail-cart">
                     <div className="paymentPage-Hotel">
                       <div className="paymentPage-room-img">
-                        <img src={image[0]} alt="" />
+                        {/* <img src={image[0]} alt="" /> */}
                       </div>
                       <div className="paymentPage-name">
                         {numRoom}x Phòng {title}
@@ -382,7 +398,7 @@ function PaymenPage(props) {
                             <del className="paymentPage-price-before">
                               <NumberFormat
                                 thousandsGroupStyle="thousand"
-                                value={price + price*10/100}
+                                value={price + (price * 10) / 100}
                                 prefix=""
                                 decimalSeparator="."
                                 displayType="text"
@@ -421,6 +437,35 @@ function PaymenPage(props) {
             </Row>
           </Container>
         </div>
+        {/* popup end time */}
+        <Modal centered isOpen={Popup}>
+          <div className="popup_endtime" style={{"padding":"2rem 0"}} >
+            <div
+              className="popup_img"
+              style={{ display: "flex", justifyItems: "center" }}
+            >
+              <img
+                style={{ width: "50%", margin: "0 auto" }}
+                src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_time_out.svg"
+                alt=""
+              />
+            </div>
+            {/* text */}
+            <div className="popup-text" style={{ textAlign: "center" }}>
+              <p className="popup-title">Thời Gian Hoàn Tất Thanh Toán Đã Hết</p>
+            </div>
+            {/*  */}
+            <div className="popup-button" style={{ textAlign: "center" ,display:"flex",justifyContent:"center"}}>
+              <button onClick={()=>{
+              history.goBack()
+              }} className="button_one" style={{"marginRight":"1rem"}} >Chọn Phòng Khác</button>
+              <button onClick={()=>{
+                setValueTime(10)
+                setPopup(!Popup)
+              }} className="button_two" >Tiếp Tục Đặt Phòng</button>
+            </div>
+          </div>
+        </Modal>
       </main>
     );
 }

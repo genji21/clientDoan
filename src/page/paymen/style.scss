@@ -180,3 +180,38 @@ main {
 // input.input-error{
 //                 border: 2px solid red;
 //             }
+.button_one{
+    color: rgb(26, 32, 44);
+    border: none;
+    height: 48px;
+    margin: 0px;
+    padding: 6px 8px;
+    font-size: 16px;
+    min-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: none;
+    background-color: rgb(226, 232, 240);
+}
+.button_two{
+    color: rgb(255, 255, 255);
+    border: none;
+    height: 48px;
+    margin: 0px;
+    padding: 6px 8px;
+    font-size: 16px;
+    min-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: none;
+    background-color: rgb(255, 51, 102);
+}
+.popup-title{
+    margin: 24px 0 8px 0;
+    padding: 0 12px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 21px;
+}
+

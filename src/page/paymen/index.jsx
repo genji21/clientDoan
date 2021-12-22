@@ -147,7 +147,7 @@ function PaymenPage(props) {
           localStorage.setItem('cart',newFilter)
         paymentApi.createPayment({ cart });
           window.open(
-            `https://apidoanbooking.herokuapp.com/order/create_payment_url?${newFilter}`
+            `apidoan-production-5fa1.up.railway.app/order/create_payment_url?${newFilter}`
           );
          
         form.reset()

@@ -1,0 +1,182 @@
+main {
+
+.paymentPage-wrap{
+    font-family: -apple-system,BlinkMacSystemFont,sans-serif;
+    font-size: 1.6rem;
+    background: hsl(210, 38%, 95%);
+    padding: 2rem;
+}
+
+.paymentPage-left{
+    .paymentPage-time-content{        
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    background: #FFBC39;
+    text-align: center;
+    border-radius: 8px;
+    justify-content: center;
+
+    .paymenPage-time>span{
+        margin-left: 10px;
+        font-size: 1.4rem;
+        line-height: 17px;
+    }
+}
+.paymenPage-hotel-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paymentPage-hotel{
+            margin-top: 2rem;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            .paymentPage-hotel-img { 
+        img{
+        width: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        }
+        .paymentPage-intro-checkinout{
+            display: flex;
+        }
+        .paymentPage-check{
+            display: flex;
+            flex-direction: column;
+            margin-right: 3rem;
+            border-left: 1px solid grey;
+            padding-left: 1rem;
+            &>span:first-child{
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 17px;
+                
+            }
+        }
+        .paymentPage-hotel-intro{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 1.6rem;
+            h4{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 21px;
+            }
+        }
+        .paymentPage-hotel-star{
+            margin: 1rem 0;
+        }
+}
+// form
+.paymentPage-form{
+   
+    h5{
+        font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 10px;
+    }
+    .paymentPage-methodPage{
+    &>span{
+        color: #48BB78;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 12px;
+    }
+    .payment_method{
+        display: flex;
+        justify-content: space-between;
+    }
+    .payment-label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+}
+.paymenPage-form-wrap{
+     margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    text-align: left;
+    input{
+        font-size: 1.6rem;
+    }
+    .paymenPage-form-bot{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+}
+.paymentPage-right{
+   .paymentPage-room-img{img{
+       height: 145px;
+       object-fit: cover;
+   }}
+ .paymentPage-Hotel{
+     text-align: left;
+      padding: 20px;
+        background: white;
+   
+ }   
+ .paymentPage-name{
+     font-size: 18px;
+    line-height: 21px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+ }
+ .paymentPage-numberRoom{
+   color: #FF3366;
+    background: #FFE7F3;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 8px;
+ }
+ .paymentPage-Detail-totalPayment{
+     margin-top: 2rem;
+     padding: 1rem;
+     background: white;
+     .paymentPage-price{
+         display: flex;
+         justify-content: space-between;
+        
+     }
+     .paymentPage-percent-sub{
+         color: #ffffff;
+    padding: 1px 3px;
+    font-size: 12px;
+    background: #FF3366;
+    font-weight: 600;
+    line-height: 14px;
+    border-radius: 4px;
+     }
+    }
+    .paymenPage-Total-Price{
+        font-size: 1.4rem;
+       
+    }
+    .paymenPage-totalPrice{
+        display: flex;
+        justify-content: space-between;
+    }
+    .paymenPage-TotalPrice-Number{
+        font-size: 1.8rem;
+        color: black;
+        font-weight: 700;
+    }
+}
+}
+// input.input-error{
+//                 border: 2px solid red;
+//             }

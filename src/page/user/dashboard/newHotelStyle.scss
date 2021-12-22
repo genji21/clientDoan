@@ -1,0 +1,32 @@
+.reviews input:not(:checked) ~ label:hover,
+.reviews input:not(:checked) ~ label:hover ~ label{
+    color: hsl(42, 100%, 50%);
+}
+.reviews input:checked ~ label{
+    color: hsl(42, 100%, 50%);
+}
+.fas.fa-star::before{
+     font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f005";;
+}
+.reviews input{
+    display: none;
+}
+.reviews label{
+    color: #999;
+    margin: 5px 0;
+    padding-right: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+// 
+.type_hotel-rank{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.hotel_rank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

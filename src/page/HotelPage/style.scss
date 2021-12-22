@@ -1,0 +1,70 @@
+.hotelPage-filter{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#hotel_page{
+    font-size: 1.6rem;
+    .hotelPage-item img{
+        width: 360px;
+    }
+}
+
+.hotelPage-filter-star,.hotelPage-filter-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   label{
+        width: 90%;
+            text-align: left;
+
+        
+    }
+    svg{
+        color: hsl(40, 100%, 61%);
+    }
+}
+
+.hotelPage-hotel{
+    display: flex;
+    text-align: left;
+}
+.hotelPage-item{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    img{
+        border-radius: 20px;
+    }
+     svg{
+        color: hsl(40, 100%, 61%);
+    }
+}
+.hotelPage-price{
+    color: #fff;
+    width: fit-content;
+    height: 20px;
+    display: flex;
+    padding: 2px 4px;
+    font-size: 12px;
+    background: #E53E3E;
+    align-items: center;
+    font-weight: 600;
+    line-height: 14px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.hotelpage_user-match{
+    color: #ffffff;
+    padding: 1px 4px;
+    font-size: 14px;
+    background: #00B6F3;
+    font-weight: 600;
+    line-height: 16px;
+    border-radius: 4px;
+}
+.hotelPage-content{
+    margin-left: 20px;
+    width: 100%;
+}

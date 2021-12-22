@@ -1,0 +1,247 @@
+div#dashboard-user{
+    font-size: 1.6rem;
+   header{
+       background: hsl(195, 100%, 48%);
+        padding: 2rem;
+        color:#fff;
+        position: sticky;
+        top: 0;
+        .dashboard-intro{
+            text-align: left;
+            .dashboard-breadcump{
+            margin-bottom: 1rem;
+                & a,& span{
+                    text-decoration: none;
+                     color:#fff;
+                }
+            }
+        }
+        // 
+        .dashboard-account{
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 36px;
+        }
+    }
+    // dashboard_user
+    .dashboard_user{
+        padding-bottom: 10rem;
+        background: hsl(216, 100%, 99%);
+        .dashboard_user-menu{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            & li{
+                margin-right:  10px;
+                padding:10px;
+            }   
+            & li a {
+                text-decoration: none;
+                color:#000;
+            }
+            & li a.active{
+                border-bottom: 3px solid;
+                color:#00B6F3;
+            }
+        }
+        // 
+        .dashboard_user-info{
+            background:#fff;
+            padding: 4rem;
+            border-radius: 10px;
+            .form-user-wrap{
+                display: flex;
+                .mb-3{
+                    margin-bottom: 3rem !important;
+                }
+            }
+            .imageUser-box{
+                position: relative;
+                background-position: center;
+                background-size: cover;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: hsl(195, 100%, 48%);
+                // 
+                .spinner_loading_avatar{
+                position: absolute !important;
+                }
+                &>span.imageUser-icon{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background: white;
+                    padding: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    border: 1px solid grey;
+                    box-shadow: 0 0 5px;
+                }
+                .imageUser-firstLetter{
+                    font-size: 2rem;
+                    font-weight: 800;
+                    color: white;
+                }
+            }
+            .form-user-right{
+                width: 60%;
+                text-align: left;
+                margin-left: 2rem;
+                label{
+                    margin: 0;
+                }
+                input{
+                    font-size: inherit;
+                    border-left: none;
+                    border-right: none;
+                    border-top: none;
+                }
+                input.form-control:focus{
+                    border-color: none ;
+                    box-shadow: unset ;
+                    border-bottom:2px solid hsl(195, 100%, 48%);
+                }
+                button.button_save{
+                    color: rgb(253, 253, 253);
+                    width: 100%;
+                    border: none;
+                    height: 44px;
+                    font-size: 1.6rem;
+                    /* height: 44px; */
+                    margin: 0px;
+                    /* padding: 10px 40px; */
+                    padding: 1rem 4rem;
+                    font-weight: 600;
+                    border-radius: 8px;
+                    text-transform: none;
+                    background-color: rgb(255, 51, 102);
+                }
+            }
+            // modal
+            .modal-header.form-header-changePassword{
+        border-bottom: none;
+    }
+        }
+    
+        // order user
+        .user_order-wrap{
+            .card{
+                padding: 1rem;
+                .card-header{
+                    text-align: left;
+                    background: none;
+                    font-size: 1.4rem;
+                    span{
+                        color:hsl(210, 82%, 74%)
+                    }
+                }
+                // card body
+                .card-body{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 2fr 1fr;
+                    .card-img-top{
+                        width: 136px;
+                        height: 102px;
+                        border-radius: 8px;
+                    }
+                    // hotel,people,name
+                    .card-name-room-people{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        &>p:first-child{
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 19px;
+                        }
+                        &>p:nth-child(2) {
+                            font-weight: 600;
+                            line-height: 17px;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                        }
+                        &>p:nth-child(3){
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    // checkIn
+                    .card-checkin-checkout{
+                        display: flex;
+                        .checkIn-checkOut{
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 17px;
+                        }
+                        // num day
+                        .card-numDay{
+                            margin: 0 2rem;
+                            .numDay{
+                                border: 1px solid #EDF2F7;
+                                display: flex;
+                                width: 34px;
+                                height: 28px;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                    .card-payment-status{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background: hsl(216, 15%, 52%);
+                        transform: translate(-10px,-10px);
+                        color: #fff;
+                        padding: 0.5rem;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.modal-header.form-header-changePassword,div.modal-footer{
+    border: none ;
+    
+}
+.modal-body{
+    input {
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.modal-dialog.modal_changePass {
+    width: 410px;
+}
+.modal-content.content_ChangePass{
+    padding: 2rem;
+    border-radius: 10px;
+}
+button.btn.button_submit{
+    background-color: hsl(345, 100%, 60%);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 6px;
+}
+h5.modal-title{
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+// 

@@ -1,0 +1,103 @@
+#user_page{
+     .user-image{
+           display: none;
+        }
+        .user_detail{
+            margin: 0 auto;
+            color: white;
+            display: flex;  
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .user_title{
+                font-family: Satisfy,cursive;
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+            .user_breadcump{
+                font-size: 3rem;
+            }
+        }
+    .container-fluid{
+        padding: 5rem;
+        .form {
+             padding: 20px;
+                border: 1px solid #e6e6e6;
+                border-radius: 12px;
+                font-size: 1.6rem;
+                  .form-group{
+                    margin-bottom: 2rem;
+                }
+            .login_label{
+                margin-bottom: 0.5rem;
+            }
+            & input{
+                border: 1px solid var(--colorTextMain,#212121);
+                border-radius: 6px;
+                min-height: 44px;
+                padding: 0 20px;
+                font-size: 15px;
+            }
+            & input.input-error{
+                border: 2px solid red;
+            }
+          
+            .link-lostPassword{
+                color: black;
+            }
+        }
+        .form_login{
+           
+
+              
+        }
+        button{
+            width: 100%;
+        padding: 1.2rem 0;
+        background: black;
+        font-size: 1.6rem;
+        border-radius: 10px;
+        }
+        & button.kep-login-facebook{
+    background: white;
+    color: black;
+    font-weight: 500;
+    border: none;
+    box-shadow: rgba(0 ,0 ,0 , 0.25) 0px 2px 4px 0px;
+}
+    }
+    
+}
+.google-button{
+    background: white !important;
+    color: black !important;
+}
+.google-button>div{
+    background: unset !important;
+}
+.facebook-button{
+    height: 50px;
+    width: 100%;
+    border: none;
+    background: unset !important;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0,0,0,0.25) 0px 2px 4px 0px;
+    font-size: 16px;
+    line-height: 48px;
+    display: flex;
+    border-radius: 10px;
+    transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s ease 0s;
+    font-family: Roboto, arial, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+}
+
+.swal2-popup img{
+        object-fit: contain;
+    }
+     p.error-message{
+                color:red;
+            }

@@ -1,0 +1,162 @@
+.booking_header{
+    // min-height: 80vh;
+    // background: url('https://storage.googleapis.com/tripi-assets/mytour/banner/home-banner.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    svg{
+        color: white;
+    }
+}
+.booking_header-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.booking_header-payment{
+    height: 60px;
+}
+.booking_header-list,.booking_header-listService,.booking_header-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.booking_header-contact{
+    list-style: none;
+}
+.booking_header-contact-item a,.booking_header-listService a {
+    color: white;
+    text-decoration: none;
+    &:hover{
+        color: unset;
+    }
+}
+.booking_header-service,.booking_header-contact-item{
+    list-style: none;
+    margin:0  20px;
+}
+.booking_header-list{
+    padding: 2rem 0;
+}
+
+// 
+.booking_header-user_form{
+    background:white;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
+.booking_header-datePicker{
+    display: flex;
+    justify-content: space-around;
+    width:100%
+}
+input{
+    border: none;
+}
+input:focus-visible{
+    border: none;
+    outline: none;
+}
+.booking_header-search,.booking_header-startDay,.booking_header-endDay{
+display: flex;
+flex-direction: column;
+align-items: start;
+width: 33.33%;
+justify-content: space-around;
+
+ input{
+     width: 100%;
+ }
+}
+.booking_header-search{
+    position: relative;
+    .booking_header-search-result{
+       top: 64px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #E2E8F0;
+    z-index: 1;
+    overflow: auto;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    max-height: 418px;
+    border-radius: 8px;
+
+    .booking_header-search-item{
+        display: flex;
+        .booking_header-item-img{
+            width: 60px;
+            height: 60px;
+            img{
+                object-fit: cover;
+            }
+
+        }
+        &:hover{
+            background:#EDF2F7;
+            cursor: pointer;
+        }
+    }
+    }
+}
+.booking_header-startDay{
+}
+.booking_header-day svg{
+    color: black;
+}
+.text-special {
+    color: #1A202C;
+    font-size: 16px;
+    min-width: 120px;
+    font-weight: 600;
+    line-height: 19px;
+    padding-top: 6px;
+}
+.booking_header-button{
+button{
+    padding: 10px 24px;
+    border-radius: 12px;
+    background: #FF3366;
+}
+}
+.booking_headear-numPeople{
+    position:relative;
+}
+.booking_header-resultPeople{
+    position: absolute;
+    width: 200%;
+    background: white;
+    top: 83px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+}
+.booking_header-room,.booking_header-adult,.booking_header-child{
+    display: flex;
+    justify-content: space-between;
+}
+.booking_header-quanity{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+.quanity_sub,.quanity_add{
+    width: 32px;
+    cursor: pointer;
+    height: 32px;
+    display: flex;
+    background: #E2E8F0;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+.spacer{
+    color:red;
+}
